@@ -16,6 +16,14 @@ class CreatePontoColetasTable extends Migration
         Schema::create('ponto__coletas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('name');
+            $table->string('endereco');
+            $table->integer('ddd');
+            $table->integer('telefone');
+            $table->string('email')->unique();
+            $table->string('responsavel');
+            $table->string('horario');
+            $table->rememberToken();
         });
     }
 

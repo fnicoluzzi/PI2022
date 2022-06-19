@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Ponto_Retira extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'endereco',
+        'ddd',
+        'telefone',
+        'email',
+        'responsavel',
+        'horario'
+    ];
 }

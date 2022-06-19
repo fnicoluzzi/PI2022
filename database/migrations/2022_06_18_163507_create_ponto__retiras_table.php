@@ -18,7 +18,8 @@ class CreatePontoRetirasTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('endereco');
-            $table->string('telefone');
+            $table->integer('ddd');
+            $table->integer('telefone');
             $table->string('email')->unique();
             $table->string('responsavel');
             $table->string('horario');
