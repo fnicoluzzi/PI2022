@@ -7,7 +7,8 @@
 	<title>Cadastrar Ponto de Coleta</title>
 </head>
 <body>
-	<form action="">
+	<form action="{{route('registrar_coletas')}}" method="POST">
+        @csrf
 		<labelfor="">Nome:</label><br/>
 		<input type="text" name="name"><br/>
 		<labelfor="">Endereco:<br/>

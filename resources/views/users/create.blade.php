@@ -7,7 +7,8 @@
 	<title>Cadastrar Ponto de Retirada</title>
 </head>
 <body>
-	<form action="">
+	<form action="{{route('registrar_users')}}" method="POST">
+		@csrf
 		<labelfor="">Nome:</label><br/>
 		<input type="text" name="name"><br/>
 		<labelfor="">E-mail:</label><br/>

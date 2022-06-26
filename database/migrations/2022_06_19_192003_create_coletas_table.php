@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePontoColetasTable extends Migration
+class CreateColetasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreatePontoColetasTable extends Migration
      */
     public function up()
     {
-        Schema::create('ponto__coletas', function (Blueprint $table) {
+        Schema::create('coletas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
             $table->string('endereco');
             $table->integer('ddd');
@@ -23,7 +22,7 @@ class CreatePontoColetasTable extends Migration
             $table->string('email')->unique();
             $table->string('responsavel');
             $table->string('horario');
-            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
@@ -34,6 +33,6 @@ class CreatePontoColetasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ponto__coletas');
+        Schema::dropIfExists('coletas');
     }
 }

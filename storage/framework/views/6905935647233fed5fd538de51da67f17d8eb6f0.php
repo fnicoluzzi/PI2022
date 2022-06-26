@@ -7,7 +7,8 @@
 	<title>Cadastrar Ponto de Retirada</title>
 </head>
 <body>
-	<form action="">
+	<form action="<?php echo e(route('registrar_retiras')); ?>" method="POST">
+        <?php echo csrf_field(); ?>
 		<labelfor="">Nome:</label><br/>
 		<input type="text" name="name"><br/>
 		<labelfor="">Endereco:<br/>
@@ -25,4 +26,4 @@
         <button>Salvar</button>
 	</form>
 </body>
-</html>
+</html><?php /**PATH /var/www/html/PI2022/resources/views/retiras/create.blade.php ENDPATH**/ ?>
