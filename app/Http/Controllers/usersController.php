@@ -20,8 +20,4 @@ class usersController extends Controller
         return "Usuário cadastrado com sucesso!";
     }
 
-    public function show($id){
-        $retira = Retira::findOrFail($id);
-        return view('retiras.show', ['retira' => $retira]);
-    }
 }

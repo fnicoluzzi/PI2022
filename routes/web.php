@@ -19,31 +19,20 @@ Route::get('/', function () {
 
 Route::get('/coletas/novo', 'App\Http\Controllers\ColetasController@create');
 Route::post('/coletas/novo', 'App\Http\Controllers\ColetasController@store')->name('registrar_coletas');
-Route::post('/coletas/ver/(id)', 'App\Http\Controllers\ColetasController@show');
+Route::get('/coletas/ver/{id}', 'App\Http\Controllers\ColetasController@show');
+Route::get('/coletas/editar/{id}', 'App\Http\Controllers\ColetasController@edit');
+Route::post('/coletas/editar/{id}', 'App\Http\Controllers\ColetasController@update')->name('alterar_coletas');
+Route::get('/coletas/excluir/{id}', 'App\Http\Controllers\ColetasController@delete');
+Route::post('/coletas/excluir/{id}', 'App\Http\Controllers\ColetasController@destroy')->name('excluir_coletas');
 
 Route::get('/retiras/novo', 'App\Http\Controllers\RetirasController@create');
 Route::post('/retiras/novo', 'App\Http\Controllers\RetirasController@store')->name('registrar_retiras');
-Route::post('/retiras/ver/(id)', 'App\Http\Controllers\RetirasController@show');
+Route::get('/retiras/ver/{id}', 'App\Http\Controllers\RetirasController@show');
+Route::get('/retiras/editar/{id}', 'App\Http\Controllers\RetirasController@edit');
+Route::post('/retiras/editar/{id}', 'App\Http\Controllers\RetirasController@update')->name('alterar_retiras');
+Route::get('/retiras/excluir/{id}', 'App\Http\Controllers\RetirasController@delete');
+Route::post('/retiras/excluir/{id}', 'App\Http\Controllers\RetirasController@destroy')->name('excluir_retiras');
 
 Route::get('/users/novo', 'App\Http\Controllers\usersController@create');
 Route::post('/users/novo', 'App\Http\Controllers\usersController@store')->name('registrar_users');
 
-Route::get('/test-conn', function () {
-    // Insere um novo usuário ao banco de dados:
-    $user = App\Http\Controllers\usersController::create([
-        'name'         => 'Carlos Ferreira',
-        'email'     => 'carlos@especializati.com.br',
-        'password'     => bcrypt('SenhaAqui'),
-    ]);
-    //Se quiser exibir os dados do usuário: 
-    dd($user);
- 
-    // Listando os usuários
-   /* $users = App\Http\Controllers\usersController::get();
- 
-    echo '<hr>';
-    foreach ($users as $user) {
-        echo "{$user->name} <br>";
-    }
-    echo '<hr>';*/
-});

@@ -23,7 +23,6 @@ class CreateRetirasTable extends Migration
             $table->string('responsavel');
             $table->string('horario');
             $table->timestamps();
-            
         });
     }
 

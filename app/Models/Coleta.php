@@ -8,5 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Coleta extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'endereco', 'ddd', 'telefone', 'email', 'responsavel','horario'];
+    protected $fillable = [
+        'name', 
+        'endereco', 
+        'ddd', 
+        'telefone', 
+        'email', 
+        'responsavel',
+        'horario'
+    ];
 }
