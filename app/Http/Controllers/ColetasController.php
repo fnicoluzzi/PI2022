@@ -60,4 +60,10 @@ class ColetasController extends Controller
         $coleta->delete();
         return "Ponto de Coleta excluído com sucesso!";
     }
+
+    public function index()
+    {
+        $coletas = Coleta::get();
+        return view('coletas.index', compact('coletas'));
+    }
 }

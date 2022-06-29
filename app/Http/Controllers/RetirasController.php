@@ -60,4 +60,10 @@ class RetirasController extends Controller
         $retira -> delete();
         return "Ponto de Retirada excluído com sucesso!";
     }
+
+    public function index()
+    {
+        $retiras = Retira::get();
+        return view('retiras.index', compact('retiras'));
+    }
 }
