@@ -7,29 +7,23 @@
 	<title>Consultar Pontos de Coleta</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Endereco</th>
-            <th>DDD</th>
-            <th>Telefone</th>
-            <th>E-mail</th>
-            <th>Responsável</th>
-            <th>Horário</th>
-        </tr>
+    <div>
+    <h2>Pontos de Coleta</h2>
         @if($coletas)
             @foreach($coletas as $coleta)
-            <tr>
-        		<td>{{$coleta->name}}</td>
-                <td>{{$coleta->endereco}}</td>
-                <td>{{$coleta->ddd}}</td>
-                <td>{{$coleta->telefone}}</td>
-                <td>{{$coleta->email}}</td>
-                <td>{{$coleta->responsavel}}</td>
-                <td>{{$coleta->horario}}</td>
+        		<p>
+                    {{$coleta->name}}<br>
+                    {{$coleta->endereco}}<br>
+                    {{$coleta->ddd}}<br>
+                    {{$coleta->telefone}}<br>
+                    {{$coleta->email}}<br>
+                    {{$coleta->responsavel}}<br>
+                    {{$coleta->horario}}<br>
+                </p>
             </tr>
             @endforeach
         @endif
-    </table>
-</body>
+        
+    </div><div><a href="/home">Voltar</a></div>
+    </body>
 </html>

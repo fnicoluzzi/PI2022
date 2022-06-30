@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
+Route::get('/sobre', function () {
+    return view('sobre');
+});
+
 Route::get('/coletas/novo', 'App\Http\Controllers\ColetasController@create');
 Route::post('/coletas/novo', 'App\Http\Controllers\ColetasController@store')->name('registrar_coletas');
 Route::get('/coletas/ver/{id}', 'App\Http\Controllers\ColetasController@show');
@@ -25,6 +33,7 @@ Route::post('/coletas/editar/{id}', 'App\Http\Controllers\ColetasController@upda
 Route::get('/coletas/excluir/{id}', 'App\Http\Controllers\ColetasController@delete');
 Route::post('/coletas/excluir/{id}', 'App\Http\Controllers\ColetasController@destroy')->name('excluir_coletas');
 Route::get('/coletas/index', 'App\Http\Controllers\ColetasController@index');
+
 
 Route::get('/retiras/novo', 'App\Http\Controllers\RetirasController@create');
 Route::post('/retiras/novo', 'App\Http\Controllers\RetirasController@store')->name('registrar_retiras');
@@ -38,3 +47,6 @@ Route::get('/retiras/index', 'App\Http\Controllers\RetirasController@index');
 Route::get('/users/novo', 'App\Http\Controllers\usersController@create');
 Route::post('/users/novo', 'App\Http\Controllers\usersController@store')->name('registrar_users');
 
+
+Route::get('/adm/index', 'App\Http\Controllers\ColetasController@index');
+Route::get('/retiras/retira_index', 'App\Http\Controllers\ColetasController@index');

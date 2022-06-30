@@ -12,7 +12,8 @@
         @if($retiras)
             @foreach($retiras as $retira)
 
-        		<p>
+                <p>
+                <a href="/retiras/editar/{{$retira->id}}">Editar</a><br>
                 {{$retira->name}}<br>
                 {{$retira->endereco}}<br>
                 {{$retira->ddd}}<br>
