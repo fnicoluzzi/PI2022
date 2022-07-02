@@ -84,7 +84,7 @@
 			</h2>
 			<a href="img/1.jpg">
 				<img class="horizontal" src="{{ asset('img/1.jpg') }}">
-			</a>
+			</a><br>
 			<a href="img/2.jpg">
 				<img class="vertical" src="{{ asset('img/2.jpg') }}">
 			</a>
@@ -93,7 +93,7 @@
 			</a>
 			<a href="img/4.jpg">
 				<img class="vertical" src="{{ asset('img/4.jpg') }}">
-			</a>
+			</a><br>
 			<a href="img/6.jpg">
 				<img class="horizontal" src="{{ asset('img/6.jpg') }}">
 			</a><br>
@@ -105,10 +105,10 @@
 			</a>
 			<a href="img/9.jpg">
 				<img class="vertical" src="{{ asset('img/9.jpg') }}">
-			</a>
+			</a><br>
 			<a href="img/10.jpg">
 				<img class="horizontal" src="{{ asset('img/10.jpg') }}">
-			</a>
+			</a><br>
 			<a href="img/8.jpg">
 				<img class="horizontal" src="{{ asset('img/8.jpg') }}">
 			</a>

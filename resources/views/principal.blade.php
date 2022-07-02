@@ -9,11 +9,7 @@
 <body>
 	<div class="container">
 		<img src="{{ asset('img/logo.jpg') }}">
-@endsection
 
-
-
-@section('rodape')
 		<a href="/home">
 			<img id="back" src="{{ asset('img/back.jpg') }}">
 		</a>
