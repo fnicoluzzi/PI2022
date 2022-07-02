@@ -85,7 +85,7 @@
 					</span>
 				</div>
 			</a>
-			<a href="">
+			<a href="/galeria">
 				<div class="esquerda">
 					<span>
 							Galeria<br>de<br>Fotos
