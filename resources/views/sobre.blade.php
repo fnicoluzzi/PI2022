@@ -3,9 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-	<div>
+	<div class="container">
+		<img src="{{ asset('img/logo.jpg') }}">
+		<div class="opcoes">
 	<h2>
 		Lorem Ipsum
 	</h2>
@@ -20,8 +23,11 @@
 	<br>
 		Generated 3 paragraphs, 354 words, 2367 bytes of Lorem Ipsum</p>
 	</p>
-		
 	</div>
-	<div><a href="/home">Voltar</a></div>
+		
+		<a href="/home">
+			<img id="back" src="{{ asset('img/back.jpg') }}">
+		</a>
+	</div>
 </body>
 </html>

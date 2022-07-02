@@ -1,0 +1,9 @@
+/* regras gerais*/
+@media all{
+	body{
+		font-family: helvetica, verdana, arial;
+		background-color: green;
+		color: #3b2612;
+		text-align: justify;
+	}
+}

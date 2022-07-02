@@ -25,6 +25,10 @@ Route::get('/sobre', function () {
     return view('sobre');
 });
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/coletas/cadastro', function () {
+    return view('coletas/cadastro');
+})->name('cadastrar_coletas');
+
 Route::get('/coletas/novo', 'App\Http\Controllers\ColetasController@create');
 Route::post('/coletas/novo', 'App\Http\Controllers\ColetasController@store')->name('registrar_coletas');
 Route::get('/coletas/ver/{id}', 'App\Http\Controllers\ColetasController@show');

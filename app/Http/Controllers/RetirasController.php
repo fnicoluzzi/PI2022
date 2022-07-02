@@ -12,7 +12,7 @@ class RetirasController extends Controller
     }
 
     public function store(Request $request){
-        //dd($request->all());
+        dd($request->all());
         Retira::create([
             'name'=> $request->name,
             'endereco'=> $request->endereco,

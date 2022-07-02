@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Cadastrar Ponto de Coleta</title>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <img src="{{ asset('img/logo.jpg') }}">
+        <div class="opcoes">
+            
 	<form action="{{route('alterar_coletas', ['id'=>$coleta->id])}}" method="POST">
         @csrf
         <labelfor="">Nome:</label><br/>
@@ -25,5 +28,11 @@
         <input type="text" name="horario" value="{{$coleta->horario}}" ><br/>
         <button>Salvar</button>
 	</form>
+
+        </div>
+        <a href="/home">
+            <img id="back" src="{{ asset('img/back.jpg') }}">
+        </a>
+    </div>
 </body>
 </html>
