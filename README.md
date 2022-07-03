@@ -1,3 +1,24 @@
+<p>Solução Web aplicada no descarte de materiais reciclados, apresentada na disciplina de Projeto Integrador para o curso de Engenharia de Computação da Universidade Virtual do Estado de São Paulo (UNIVESP). 
+</p>
+<p>
+Trabalharam nesta aplicação, atuando nas mais diversas áreas da engenharia de software, desenvolvimento de sistemas e disciplinas correlatas os profissinais abaixo listados.
+</p>
+<p>
+Fabiana Gonçalves Lagos da Costa
+Fábio Nascimento Nicoluzzi Freitas
+Jhophanie Gomes de Oliveira
+Jose Roberto da Silva
+Paulo Cezar Rodrigues Porto
+Paulo Vitor Amorim
+</p>
+<p>
+Referências:
+https://youtu.be/xSchL6bklDk
+https://www.tecnologiabasica.com.br/2017/05/instalando-e-configurando-o-postgresql.html
+https://imasters.com.br/php/como-fazer-um-crud-no-laravel-do-zero-parte-1
+https://imasters.com.br/php/como-fazer-um-crud-no-laravel-do-zero-parte-2
+https://velhobit.com.br/programacao/carregando-cep-cidades-dinamicamente.html
+</p>
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
