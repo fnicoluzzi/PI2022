@@ -22,7 +22,7 @@ class RetirasController extends Controller
             'responsavel'=> $request->responsavel,
             'horario'=> $request->horario,
         ]);
-        return "Ponto de Retirada cadastrado com sucesso!";
+        return "Ponto de Retirada cadastrado com sucesso!<a href=/home_adm>Home</a>";
     }
 
     public function show($id){
@@ -47,7 +47,7 @@ class RetirasController extends Controller
             'responsavel'=> $request->responsavel,
             'horario'=> $request->horario
         ]);
-        return "Ponto de Retirada atualizado com sucesso!";
+        return "Ponto de Retirada atualizado com sucesso!<a href=/home_adm>Home</a>";
     }
 
     public function delete($id){
@@ -58,12 +58,17 @@ class RetirasController extends Controller
     public function destroy($id){
         $retira = Retira::findOrFail($id);
         $retira -> delete();
-        return "Ponto de Retirada excluído com sucesso!";
+        return "Ponto de Retirada excluído com sucesso!<a href=/home_adm>Home</a>";
     }
 
     public function index()
     {
         $retiras = Retira::get();
         return view('retiras.index', compact('retiras'));
+    }
+    public function index_adm()
+    {
+        $retiras = Retira::get();
+        return view('retiras.index_adm', compact('retiras'));
     }
 }

@@ -100,9 +100,9 @@
 				</div>
 			</a>
 		</div>
-		<a href="/home">
+		<!--<a href="/home">
 			<img id="back" src="{{ asset('img/back.jpg') }}">
-		</a>
+		</a>-->
 	</div>
 </body>
 </html>

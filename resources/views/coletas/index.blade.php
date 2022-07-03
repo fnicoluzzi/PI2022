@@ -77,16 +77,15 @@
             @foreach($coletas as $coleta)
         	
             <h3>
-                {{$coleta->name}}
+                Posto: {{$coleta->name}}
             </h3>
             
             <p>
-                {{$coleta->endereco}}<br>
-                {{$coleta->ddd}}<br>
-                {{$coleta->telefone}}<br>
-                {{$coleta->email}}<br>
-                {{$coleta->responsavel}}<br>
-                {{$coleta->horario}}<br>
+                Endereço: {{$coleta->endereco}}<br>
+                Telefone: {{$coleta->ddd}}.{{$coleta->telefone}}<br>
+                E-mail: {{$coleta->email}}<br>
+                Responsável: {{$coleta->responsavel}}<br>
+                Horário de Atendimento: {{$coleta->horario}}<br>
             </p>
 
             @endforeach

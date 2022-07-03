@@ -72,19 +72,19 @@
         <img src="{{ asset('img/logo.jpg') }}">
         <div class="opcoes">
 
-		<labelfor="">Nome:</label><br/>
+		<labelfor="">Nome:</label>
 		<input type="text" name="name" value="{{$retira->name}}"><br/>
-		<labelfor="">Endereco:<br/>
+		<labelfor="">Endereco:</label>
         <input type="text" name="endereco" value="{{$retira->endereco}}" ><br/>
-        <labelfor="">DDD:</label><br/>
+        <labelfor="">DDD:</label>
         <input type="text" name="ddd" value="{{$retira->ddd}}" ><br/>
-        <labelfor="">Telefone:<br/>
+        <labelfor="">Telefone:</label>
         <input type="text" name="telefone" value="{{$retira->telefone}}" ><br/>
-        <labelfor="">E-mail:</label><br/>
+        <labelfor="">E-mail:</label>
         <input type="text" name="email" value="{{$retira->email}}" ><br/>
-        <labelfor="">Responsável:<br/>
+        <labelfor="">Responsável:</label>
         <input type="text" name="responsavel" value="{{$retira->responsavel}}" ><br/>
-        <labelfor="">Horário de Atendimento:</label><br/>
+        <labelfor="">Horário de Atendimento:</label>
         <input type="text" name="horario" value="{{$retira->horario}}" ><br/>
     
         </div>

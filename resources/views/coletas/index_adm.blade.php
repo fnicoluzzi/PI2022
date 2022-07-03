@@ -72,27 +72,30 @@
         <img src="{{ asset('img/logo.jpg') }}">
         <div class="opcoes">
             
-	<form action="{{route('registrar_retiras')}}" method="POST">
-        @csrf
-		<labelfor="">Nome:</label><br/>
-		<input type="text" name="name"><br/>
-		<labelfor="">Endereco:<br/>
-        <input type="text" name="endereco"><br/>
-        <labelfor="">DDD:</label><br/>
-        <input type="text" name="ddd"><br/>
-        <labelfor="">Telefone:<br/>
-        <input type="text" name="telefone"><br/>
-        <labelfor="">E-mail:</label><br/>
-        <input type="text" name="email"><br/>
-        <labelfor="">Responsável:<br/>
-        <input type="text" name="responsavel"><br/>
-        <labelfor="">Horário de Atendimento:</label><br/>
-        <input type="text" name="horario"><br/>
-        <button>Salvar</button>
-	</form>
+    <h2>Pontos de Coleta</h2>
+            <a href="/coletas/novo">Cadastrar Novo</a>
+        @if($coletas)
+            @foreach($coletas as $coleta)
+        	
+            <h3>
+                Posto: {{$coleta->name}}
+            </h3>
+            
+            <a href="/coletas/editar/{{$coleta->id}}">Editar</a>
+            <a href="/coletas/excluir/{{$coleta->id}}">Deletar</a>
+            <p>
+                Endereço: {{$coleta->endereco}}<br>
+                Telefone: {{$coleta->ddd}}.{{$coleta->telefone}}<br>
+                E-mail: {{$coleta->email}}<br>
+                Responsável: {{$coleta->responsavel}}<br>
+                Horário de Atendimento: {{$coleta->horario}}<br>
+            </p>
+            @endforeach
+        @endif
+        
 
         </div>
-        <a href="/home">
+        <a href="/home_adm">
             <img id="back" src="{{ asset('img/back.jpg') }}">
         </a>
     </div>

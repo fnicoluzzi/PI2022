@@ -71,30 +71,33 @@
     <div class="container">
         <img src="{{ asset('img/logo.jpg') }}">
         <div class="opcoes">
-            
-	<form action="{{route('registrar_coletas')}}" method="POST">
-        @csrf
-		<labelfor="">Nome:</label><br/>
-		<input type="text" name="name"><br/>
-		<labelfor="">Endereco:<br/>
-        <input type="text" name="endereco"><br/>
-        <labelfor="">DDD:</label><br/>
-        <input type="text" name="ddd"><br/>
-        <labelfor="">Telefone:<br/>
-        <input type="text" name="telefone"><br/>
-        <labelfor="">E-mail:</label><br/>
-        <input type="text" name="email"><br/>
-        <labelfor="">Responsável:<br/>
-        <input type="text" name="responsavel"><br/>
-        <labelfor="">Horário de Atendimento:</label><br/>
-        <input type="text" name="horario"><br/>
-        <button>Salvar</button>
-	</form>
+
+    <h2>Onde Retirar?</h2>
+            <a href="/retiras/novo">Cadastro</a>
+        @if($retiras)
+            @foreach($retiras as $retira)
+
+            <h3>
+                Posto: {{$retira->name}}
+            </h3>
+
+            <a href="/retiras/editar/{{$retira->id}}">Editar</a>
+            <a href="/retiras/excluir/{{$retira->id}}">Deletar</a>
+        	<p>
+                Endereço: {{$retira->endereco}}<br>
+                Telefone: {{$retira->ddd}}.{{$retira->telefone}}<br>
+                E-mail: {{$retira->email}}<br>
+                Responsável: {{$retira->responsavel}}<br>
+                Horário de Atendimento: {{$retira->horario}}
+            </p>
+            @endforeach
+        @endif
+
 
         </div>
-        <a href="/home">
+        <a href="/home_adm">
             <img id="back" src="{{ asset('img/back.jpg') }}">
         </a>
     </div>
 </body>
-</html>
+</html>        

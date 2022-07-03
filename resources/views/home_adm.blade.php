@@ -71,18 +71,40 @@
 	<div class="container">
 		<img src="{{ asset('img/logo.jpg') }}">
 		<div class="opcoes">
-			
-    <form action="{{route('excluir_retiras', ['id'=>$retira->id])}}" method="POST">
-        @csrf
-		<labelfor="">Tem certeza que deseja excluir este Ponto de Retirada?</label><br/>
-        <input type="text" name="name" value="{{$retira->name}}"><br/>
-        <button>Sim</button>
-	</form>
-
-        </div>
-        <a href="/home_adm">
-            <img id="back" src="{{ asset('img/back.jpg') }}">
-        </a>
-    </div>
+			<a href="/coletas/index_adm">
+				<div class="esquerda">
+					<span>
+							Pontos<br>de<br>Coleta
+					</span>
+				</div>
+			</a>
+			<a href="/retiras/index_adm">
+				<div class="direita">
+					<span>
+							Onde<br>Retirar a<br>casinha?
+					</span>
+				</div>
+			</a>
+<!--
+			<a href="/galeria">
+				<div class="esquerda">
+					<span>
+							Galeria<br>de<br>Fotos
+					</span>
+				</div>
+			</a>
+			<a href="/sobre">
+				<div class="direita">
+					<span>
+							Sobre<br>o<br>Projeto
+					</span>
+				</div>
+			</a>
+-->
+		</div>
+		<!--<a href="/home_adm">
+			<img id="back" src="{{ asset('img/back.jpg') }}">
+		</a>-->
+	</div>
 </body>
 </html>

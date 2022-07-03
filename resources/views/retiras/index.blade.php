@@ -77,16 +77,15 @@
             @foreach($retiras as $retira)
 
             <h3>
-                {{$retira->name}}
+                Posto: {{$retira->name}}
             </h3>
 
         	<p>
-                {{$retira->endereco}}<br>
-                {{$retira->ddd}}<br>
-                {{$retira->telefone}}<br>
-                {{$retira->email}}<br>
-                {{$retira->responsavel}}<br>
-                {{$retira->horario}}
+                Endereço: {{$retira->endereco}}<br>
+                Telefone: {{$retira->ddd}}.{{$retira->telefone}}<br>
+                E-mail: {{$retira->email}}<br>
+                Responsável: {{$retira->responsavel}}<br>
+                Horário de Atendimento: {{$retira->horario}}
             </p>
 
             @endforeach

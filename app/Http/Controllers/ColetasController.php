@@ -22,7 +22,7 @@ class ColetasController extends Controller
             'responsavel'=> $request->responsavel,
             'horario'=> $request->horario
         ]);
-        return "Ponto de Coleta cadastrado com sucesso!";
+        return "Ponto de Coleta cadastrado com sucesso!<br/><a href=/home_adm>Home</a>";
     }
 
     public function show($id){
@@ -47,7 +47,7 @@ class ColetasController extends Controller
             'responsavel'=> $request->responsavel,
             'horario'=> $request->horario
         ]);
-        return "Ponto de Coleta atualizado com sucesso!";
+        return "Ponto de Coleta atualizado com sucesso!<a href=/home_adm>Home</a>";
     }
 
     public function delete($id){
@@ -58,12 +58,17 @@ class ColetasController extends Controller
     public function destroy($id){
         $coleta = Coleta::findOrFail($id);
         $coleta->delete();
-        return "Ponto de Coleta excluído com sucesso!";
+        return "Ponto de Coleta excluído com sucesso!<a href=/home_adm>Home</a>";
     }
 
     public function index()
     {
         $coletas = Coleta::get();
         return view('coletas.index', compact('coletas'));
+    }
+    public function index_adm()
+    {
+        $coletas = Coleta::get();
+        return view('coletas.index_adm', compact('coletas'));
     }
 }
