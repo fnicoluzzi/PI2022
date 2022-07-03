@@ -68,29 +68,60 @@
     </style>
 </head>
 <body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <div class="container">
         <img src="{{ asset('img/logo.jpg') }}">
         <div class="opcoes">
             
 	<form action="{{route('alterar_retiras', ['id'=>$retira->id])}}" method="POST">
         @csrf
+        <labelfor="">CEP:</label><br/>
+        <input id="cep" type="text" name="name"><br/>        
         <labelfor="">Nome:</label><br/>
-        <input type="text" name="name" value="{{$retira->name}}"><br/>
+        <input id="name" type="text" name="name" value="{{$retira->name}}"><br/>
         <labelfor="">Endereco:<br/>
-        <input type="text" name="endereco" value="{{$retira->endereco}}" ><br/>
+        <input id="logradouro" type="text" name="endereco" value="{{$retira->endereco}}" ><br/>
         <labelfor="">DDD:</label><br/>
-        <input type="text" name="ddd" value="{{$retira->ddd}}" ><br/>
+        <input id="ddd" type="text" name="ddd" value="{{$retira->ddd}}" ><br/>
         <labelfor="">Telefone:<br/>
-        <input type="text" name="telefone" value="{{$retira->telefone}}" ><br/>
+        <input id="telefone" type="text" name="telefone" value="{{$retira->telefone}}" ><br/>
         <labelfor="">E-mail:</label><br/>
-        <input type="text" name="email" value="{{$retira->email}}" ><br/>
+        <input id="email" type="text" name="email" value="{{$retira->email}}" ><br/>
         <labelfor="">Responsável:<br/>
-        <input type="text" name="responsavel" value="{{$retira->responsavel}}" ><br/>
+        <input id="responsavel" type="text" name="responsavel" value="{{$retira->responsavel}}" ><br/>
         <labelfor="">Horário de Atendimento:</label><br/>
-        <input type="text" name="horario" value="{{$retira->horario}}" ><br/>
+        <input id="horario" type="text" name="horario" value="{{$retira->horario}}" ><br/>
         <button>Salvar</button>
 	</form>
-
+    <script type="text/javascript">
+    $("#cep").focusout(function(){
+        //Início do Comando AJAX
+        $.ajax({
+            //O campo URL diz o caminho de onde virá os dados
+            //É importante concatenar o valor digitado no CEP
+            url: 'https://viacep.com.br/ws/'+$(this).val()+'/json/',
+            //Aqui você deve preencher o tipo de dados que será lido,
+            //no caso, estamos lendo JSON.
+            dataType: 'json',
+            //SUCESS é referente a função que será executada caso
+            //ele consiga ler a fonte de dados com sucesso.
+            //O parâmetro dentro da função se refere ao nome da variável
+            //que você vai dar para ler esse objeto.
+            success: function(resposta){
+                //Agora basta definir os valores que você deseja preencher
+                //automaticamente nos campos acima.
+                $("#logradouro").val (resposta.logradouro);
+                $("#complemento").val(resposta.complemento);
+                $("#bairro").val(resposta.bairro);
+                $("#cidade").val(resposta.localidade);
+                $("#uf").val(resposta.uf);
+                //Vamos incluir para que o Número seja focado automaticamente
+                //melhorando a experiência do usuário
+                $("#numero").focus();
+            }
+        });
+    });
+</script>
         </div>
         <a href="/home_adm">
             <img id="back" src="{{ asset('img/back.jpg') }}">

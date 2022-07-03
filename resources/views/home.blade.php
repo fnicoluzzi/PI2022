@@ -65,6 +65,17 @@
 	}
 
 }
+
+@media all and (max-width:31.25em) {
+	.opcoes{
+		background: rgba(0, 255, 150, 0.5);
+		width:900px;
+		height:500px;
+		margin-left: auto;
+		margin-right: auto;
+		overflow-y: auto;
+	}
+}
 	</style>
 </head>
 <body>
