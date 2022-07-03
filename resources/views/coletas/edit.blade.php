@@ -76,21 +76,21 @@
 	<form action="{{route('alterar_coletas', ['id'=>$coleta->id])}}" method="POST">
         @csrf
         <labelfor="">CEP:</label><br/>
-        <input id="cep" type="text" name="name"><br/>
+        <input id="cep" type="number" name="cep" autofocus><br/>
         <labelfor="">Nome:</label><br/>
-        <input id="name" type="text" name="name" value="{{$coleta->name}}"><br/>
+        <input id="name" type="text" name="name" value="{{$coleta->name}}" required><br/>
         <labelfor="">Endereco:<br/>
-        <input id="logradouro" type="text" name="endereco" value="{{$coleta->endereco}}" ><br/>
+        <input id="logradouro" type="text" name="endereco" value="{{$coleta->endereco}}" required><br/>
         <labelfor="">DDD:</label><br/>
-        <input id="ddd" type="text" name="ddd" value="{{$coleta->ddd}}" ><br/>
+        <input id="ddd" type="number" size="2" maxlength="2" name="ddd" value="{{$coleta->ddd}}" required><br/>
         <labelfor="">Telefone:<br/>
-        <input id="telefone" type="text" name="telefone" value="{{$coleta->telefone}}" ><br/>
+        <input id="telefone" type="telefone" name="telefone" size="9" maxlength="9" value="{{$coleta->telefone}}" required><br/>
         <labelfor="">E-mail:</label><br/>
-        <input id="email" type="text" name="email" value="{{$coleta->email}}" ><br/>
+        <input id="email" type="text" name="email" value="{{$coleta->email}}" required><br/>
         <labelfor="">Responsável:<br/>
-        <input id="responsavel" type="text" name="responsavel" value="{{$coleta->responsavel}}" ><br/>
+        <input id="responsavel" type="text" name="responsavel" value="{{$coleta->responsavel}}" required><br/>
         <labelfor="">Horário de Atendimento:</label><br/>
-        <input id="horario" type="text" name="horario" value="{{$coleta->horario}}" ><br/>
+        <input id="horario" type="text" name="horario" value="{{$coleta->horario}}" required><br/>
         <button>Salvar</button>
 	</form>
     <script type="text/javascript">
@@ -123,7 +123,7 @@
     });
 </script>
         </div>
-        <a href="/home">
+        <a href="/home_adm">
             <img id="back" src="{{ asset('img/back.jpg') }}">
         </a>
     </div>

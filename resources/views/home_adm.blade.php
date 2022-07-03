@@ -46,8 +46,8 @@
 		height:50px;
 		color: rgba(255, 0, 0, 1.0);
 		padding: 10px;
-		margin-left: 50px;
-		margin-right: 50px;
+		margin-left: 25px;
+		margin-right: 25px;
 		margin-bottom: 25px;
 	}
 
@@ -71,6 +71,7 @@
 	<div class="container">
 		<img src="{{ asset('img/logo.jpg') }}">
 		<div class="opcoes">
+			<h2>Ambiente de Adminsitração</h2>
 			<a href="/coletas/index_adm">
 				<div class="esquerda">
 					<span>
@@ -79,9 +80,16 @@
 				</div>
 			</a>
 			<a href="/retiras/index_adm">
-				<div class="direita">
+				<div class="esquerda">
 					<span>
 							Onde<br>Retirar a<br>casinha?
+					</span>
+				</div>
+			</a>
+			<a href="/home">
+				<div class="esquerda">
+					<span>
+							Aplicação<br>para<br>o cliente
 					</span>
 				</div>
 			</a>

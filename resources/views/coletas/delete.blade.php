@@ -80,7 +80,7 @@
 	</form>
 
         </div>
-        <a href="/home">
+        <a href="/home_adm">
             <img id="back" src="{{ asset('img/back.jpg') }}">
         </a>
     </div>

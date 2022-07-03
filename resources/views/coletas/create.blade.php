@@ -76,21 +76,21 @@
 	<form action="{{route('registrar_coletas')}}" method="POST">
         @csrf
         <labelfor="">CEP:</label><br/>
-        <input id="cep" type="text" name="name"><br/>
+        <input id="cep" type="number" name="cep" required autofocus><br/>
         <labelfor="">Nome:</label><br/>
-        <input id="name" type="text" name="name"><br/>
+        <input id="name" type="text" name="name" required><br/>
         <labelfor="">Endereco:<br/>
-        <input id="logradouro" type="text" name="endereco"><br/>
+        <input id="logradouro" type="text" name="endereco" required><br/>
         <labelfor="">DDD:</label><br/>
-        <input id="ddd" type="text" name="ddd"><br/>
+        <input id="ddd" type="number" size="2" maxlength="2" name="ddd" required><br/>
         <labelfor="">Telefone:<br/>
-        <input id="telefone" type="text" name="telefone"><br/>
+        <input id="telefone" type="telefone"  size="9" maxlength="9" name="telefone" required><br/>
         <labelfor="">E-mail:</label><br/>
-        <input id="email" type="text" name="email"><br/>
+        <input id="email" type="text" name="email" required><br/>
         <labelfor="">Responsável:<br/>
-        <input id="responsavel" type="text" name="responsavel"><br/>
+        <input id="responsavel" type="text" name="responsavel" required><br/>
         <labelfor="">Horário de Atendimento:</label><br/>
-        <input id="horario" type="text" name="horario"><br/>
+        <input id="horario" type="text" name="horario" required><br/>
         <button>Salvar</button>
     </form>
     <script type="text/javascript">
@@ -124,7 +124,7 @@
 </script>
 
         </div>
-        <a href="/home">
+        <a href="/home_adm">
             <img id="back" src="{{ asset('img/back.jpg') }}">
         </a>
     </div>

@@ -76,21 +76,21 @@
 	<form action="{{route('alterar_retiras', ['id'=>$retira->id])}}" method="POST">
         @csrf
         <labelfor="">CEP:</label><br/>
-        <input id="cep" type="text" name="name"><br/>        
+        <input id="cep" type="number" name="cep" autofocus><br/>
         <labelfor="">Nome:</label><br/>
-        <input id="name" type="text" name="name" value="{{$retira->name}}"><br/>
+        <input id="name" type="text" name="name" value="{{$retira->name}}" required><br/>
         <labelfor="">Endereco:<br/>
-        <input id="logradouro" type="text" name="endereco" value="{{$retira->endereco}}" ><br/>
+        <input id="logradouro" type="text" name="endereco" value="{{$retira->endereco}}" required><br/>
         <labelfor="">DDD:</label><br/>
-        <input id="ddd" type="text" name="ddd" value="{{$retira->ddd}}" ><br/>
+        <input id="ddd" type="number" size="2" maxlength="2" name="ddd" value="{{$retira->ddd}}" required><br/>
         <labelfor="">Telefone:<br/>
-        <input id="telefone" type="text" name="telefone" value="{{$retira->telefone}}" ><br/>
+        <input id="telefone" type="telefone" name="telefone" size="9" maxlength="9" value="{{$retira->telefone}}" required><br/>
         <labelfor="">E-mail:</label><br/>
-        <input id="email" type="text" name="email" value="{{$retira->email}}" ><br/>
+        <input id="email" type="text" name="email" value="{{$retira->email}}" required><br/>
         <labelfor="">Responsável:<br/>
-        <input id="responsavel" type="text" name="responsavel" value="{{$retira->responsavel}}" ><br/>
+        <input id="responsavel" type="text" name="responsavel" value="{{$retira->responsavel}}" required><br/>
         <labelfor="">Horário de Atendimento:</label><br/>
-        <input id="horario" type="text" name="horario" value="{{$retira->horario}}" ><br/>
+        <input id="horario" type="text" name="horario" value="{{$retira->horario}}" required><br/>
         <button>Salvar</button>
 	</form>
     <script type="text/javascript">

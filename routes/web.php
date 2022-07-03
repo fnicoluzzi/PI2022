@@ -25,7 +25,7 @@ Route::get('/home_adm', function () {
 });
 
 Route::get('/', function () {
-    return view('home');
+    return view('home_adm');
 });
 
 
